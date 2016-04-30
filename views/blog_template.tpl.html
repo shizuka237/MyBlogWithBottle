@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.posts
+{
+    background : yellow;
+    float : top;
+}
+</style>
+<title>My Blog</title>
+
+</head>
+<body>
+
+%if (username != None):
+Welcome    <a href="/welcome"> {{username}} </a> |  <a href="/logout">Logout</a> | <a href="/newpost">New Post</a><p>
+%end
+
+<h1>My Blog</h1>
+
+
+This is a placeholder for the blog
+
+% for post in all_posts:
+    </br>
+    <div class ="posts" >
+   <h2 style="border:10px" href="/showpost">{{post['owner']}} : {{post['head']}}  </h2>
+   <h3>{{post['_id'].split('.')[0]}}</h3>
+   <p>{{post['text']}}</p>
+   </div>
+   
+</body>
+</html>
+
+
