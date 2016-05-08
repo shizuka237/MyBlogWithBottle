@@ -19,8 +19,6 @@ def make_salt():
         for i in range(5):
             salt = salt + random.choice(string.ascii_letters)
         return salt
-        
-        
 # General Discussion on structure. This program implements a blog. This file is the best place to start to get
 # to know the code. In this file, which is the controller, we define a bunch of HTTP routes that are handled
 # by functions. The basic way that this magic occurs is through the decorator design pattern. Decorators
